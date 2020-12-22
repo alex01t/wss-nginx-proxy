@@ -1,0 +1,18 @@
+version: "3"
+services:
+  # https://learn.javascript.ru/websockets
+  s1:
+    build:
+      context: server/
+  s2:
+    build:
+      context: server/
+
+  # https://www.nginx.com/blog/websocket-nginx/
+  front:
+    image: nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./tls:/tls
+    ports:
+      - 8443:8443

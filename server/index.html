@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+
+connect ("s1" and "s2" are two WS backends):
+<form name="wsconnect">
+  <input type="text" name="wsurl" size="42" value="wss://0.0.0.0:8443/ws/s1/8081/"/>
+  <input type="submit" value="connect"/>
+</form>
+
+<form name="publish">
+  <input type="text" size="42" name="message"/>
+  <input type="submit" value="send"/>
+</form>
+
+<div id="subscribe"></div>
+
+<script src="browser.js"></script>
+
+</body>
+</html>
